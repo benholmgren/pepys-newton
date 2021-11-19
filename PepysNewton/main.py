@@ -1,3 +1,4 @@
+import Plot
 import Dice
 
 
@@ -18,11 +19,20 @@ def freq(outcomes):
     return count / len(outcomes)
 
 
+def makeplot (disc, trial):
+    data = []
+    for i in range(len(trial)):
+        if i % disc == 0:
+            curfreq = freq(trial[0:i+1])
+            data.append(curfreq)
+    Plot.plot(data)
+
+
 if __name__ == '__main__':
-    trial1 = experiment(100000, 1, 6)
-    trial2 = experiment(100000, 2, 6)
-    trial3 = experiment(100000, 3, 6)
+    trial1 = experiment(100, 1, 6)
+    trial2 = experiment(100, 2, 6)
+    trial3 = experiment(100, 3, 6)
     print(freq(trial1))
     print(freq(trial2))
     print(freq(trial3))
-
+    makeplot(5, trial1)
