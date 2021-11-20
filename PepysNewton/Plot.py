@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def plot(data):
+def plot(data, title):
        plt.style.use('_mpl-gallery')
        # make data
        np.random.seed(3)
@@ -16,5 +16,7 @@ def plot(data):
 
        ax.set(xlim=(0, len(data)), xticks=np.arange(0, len(data)),
               ylim=(0, 1), yticks=np.arange(0, 1))
-
+       plt.title(title)
+       plt.xlabel("Trial")
+       plt.ylabel("Success Frequency")
        plt.show()
