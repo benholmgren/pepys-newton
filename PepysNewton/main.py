@@ -29,12 +29,13 @@ def makeplot (disc, trial, trialnum):
 
 
 if __name__ == '__main__':
-    trial1 = experiment(1000, 1, 6)
-    trial2 = experiment(1000, 2, 6)
-    trial3 = experiment(1000, 3, 6)
+    trial1 = experiment(100000, 1, 6)
+    trial2 = experiment(100000, 2, 6)
+    trial3 = experiment(100000, 3, 6)
     print(freq(trial1))
     print(freq(trial2))
     print(freq(trial3))
-    makeplot(50, trial1, "Trial 1")
-    makeplot(50, trial2, "Trial 2")
-    makeplot(50, trial3, "Trial 3")
+
+    # makeplot(50, trial1, "Trial 1")
+    # makeplot(50, trial2, "Trial 2")
+    # makeplot(50, trial3, "Trial 3")
